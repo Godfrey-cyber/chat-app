@@ -16,7 +16,7 @@ const Message = ({ messages, name }) => {
         console.log(text, user, name, message)
         return (
            <ScrollToBottom>
-          <div className="flex flex-col">
+          <div key={index} className="flex flex-col">
           {isSentByCurrentUser ? (
           <div key={index} className="flex flex-col rounded-2xl w-4/5 bg-teal-400 justify-self-end ml-4 my-3 px-4">
               <p className="text-orange-600 pl-3 text-xs pt-2">{trimmedName}</p>
@@ -29,7 +29,7 @@ const Message = ({ messages, name }) => {
             </div>    
         )}
             </div>
-    </ScrollToBottom>
+     </ScrollToBottom>
             
       )})}
       </>
